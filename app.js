@@ -6,7 +6,7 @@ var logger = require('morgan');
 const expressSession=require("express-session");
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-
+const passport=require("passport");
 var app = express();
 
 // view engine setup
