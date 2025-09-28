@@ -23,7 +23,7 @@
           class="img1"
         />
         <p class="header">Make account to see more</p>
-<form>
+<form action="/register" method="POST">
         <input
           type="email"
           name="email"
@@ -39,10 +39,11 @@
           class="detail"
         /><br />
         <input type="password" name="password" placeholder="Password" class="detail" />
+        <input type="submit" class="btn int" value="Register Account "/>
 </form>
-        <h4>Forgot your password?</h4>
+        <a href="/forgot">Forgot your password?</a>
 
-        <button class="btn int">Log in</button>
+        
         <p class="or">OR</p>
 
         <button class="btn fbk">
