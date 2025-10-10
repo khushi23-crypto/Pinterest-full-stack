@@ -1,19 +1,16 @@
 var express = require('express');
-
 var router = express.Router();
 const userModel = require("./users");
 const postModel = require("./posts");
 const passport=require("passport");
 const localStrategy=require("passport-local");
 passport.use(new localStrategy(userModel.authenticate()));
-
 router.get('/', function (req, res) {
   res.render("index",{title:'Express'});
 });
 router.get('/login', function (req, res) {
   res.render("login");
 });
-
 router.get("/profile",isLoggedIn,function(req,res,next){
   res.send("profile");
 });
